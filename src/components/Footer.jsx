@@ -36,18 +36,22 @@ const Footer = ({ onOpenLegal }) => {
                     <div className="mt-8 flex flex-col items-center gap-3 w-full max-w-md">
                         <p className="text-textMuted text-sm font-medium">Not on Android? Join the waitlist for our iOS release and exclusive updates.</p>
                         <form
+                            action="https://formsubmit.co/info@ubirtai.site"
+                            method="POST"
                             className="flex w-full mt-2 relative group"
-                            onSubmit={(e) => { e.preventDefault(); alert('Joined waitlist!'); }}
                         >
+                            <input type="hidden" name="_subject" value="New iOS Waitlist Signup!" />
+                            <input type="hidden" name="_captcha" value="false" />
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Enter email for ios waitlist"
                                 required
                                 className="w-full bg-surface/80 border border-white/10 rounded-full py-3 pl-6 pr-24 text-sm text-textMain placeholder-textMuted focus:outline-none focus:border-success/50 focus:ring-1 focus:ring-success/50 transition-all duration-300"
                             />
                             <button
                                 type="submit"
-                                className="absolute right-1.5 top-1.5 bottom-1.5 px-6 rounded-full bg-gradient-to-r from-success to-accent text-background font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,255,136,0.4)] transition-all duration-300"
+                                className="absolute right-1.5 top-1.5 bottom-1.5 px-6 rounded-full bg-linear-to-r from-success to-accent text-background font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,255,136,0.4)] transition-all duration-300"
                             >
                                 Join
                             </button>
