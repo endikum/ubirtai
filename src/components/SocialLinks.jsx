@@ -16,7 +16,7 @@ const SocialLink = ({ name, url, icon, color }) => (
             >
                 <i className={icon}></i>
             </div>
-            <span className="font-display font-medium text-lg text-textMain group-hover:text-white transition-colors">{name}</span>
+            <span className="font-display font-medium text-lg text-textMain group-hover-gradient-text transition-all duration-300">{name}</span>
         </div>
 
         <div className="relative z-10 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-textMuted group-hover:bg-white/10 group-hover:text-white transition-all duration-300">

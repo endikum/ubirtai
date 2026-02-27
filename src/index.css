@@ -2,14 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0f;
-  --color-surface: #12121c;
-  --color-primary: #7b1fa2;
-  /* Deep purple */
+  --color-background: #060913;
+  --color-surface: #0c1428;
+  --color-primary: #0d5cba;
+  /* Brand Blue */
   --color-accent: #00e5ff;
   /* Cyan */
   --color-success: #00ff88;
-  /* Neon green - new accent */
+  /* Neon green */
+  --color-warning: #ffcc00;
+  /* Circuit Yellow */
   --color-textMain: #f0f0f5;
   --color-textMuted: #9a9aab;
 
@@ -67,7 +69,25 @@
   .gradient-text {
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-success), var(--color-accent));
+    background-image: linear-gradient(to right, var(--color-accent), #ffffff, var(--color-primary));
+    animation: gradient-x 15s ease infinite;
+  }
+
+  .hover-gradient-text:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-image: linear-gradient(to right, var(--color-accent), #ffffff, var(--color-primary));
+    animation: gradient-x 15s ease infinite;
+  }
+
+  .group:hover .group-hover-gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background-image: linear-gradient(to right, var(--color-accent), #ffffff, var(--color-primary));
     animation: gradient-x 15s ease infinite;
   }
 
@@ -126,4 +146,20 @@
   50% {
     opacity: .5;
   }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px) scale(1.5) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 2s ease-out forwards;
 }

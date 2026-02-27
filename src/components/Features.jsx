@@ -34,7 +34,7 @@ const Features = () => {
                     <h3 className="text-4xl md:text-5xl font-display font-bold text-textMain">
                         Content That <span className="gradient-text">Drives Results</span>
                     </h3>
-                    <p className="mt-4 text-textMuted max-w-2xl mx-auto text-lg hover:text-white transition-colors">
+                    <p className="mt-4 text-textMuted max-w-2xl mx-auto text-lg hover-gradient-text transition-all duration-300">
                         Our app learns what inspires you, delivering a personalized feed of high-impact reels.
                     </p>
                 </div>
@@ -46,13 +46,13 @@ const Features = () => {
                             className="glass-card group relative overflow-hidden"
                             style={{ animationDelay: `${card.delay}ms` }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-success/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                            <div className="w-16 h-16 rounded-2xl bg-surface border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300">
+                            <div className="w-16 h-16 rounded-2xl bg-surface border border-white/5 group-hover:border-accent/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all duration-300">
                                 {card.icon}
                             </div>
 
-                            <h4 className="text-2xl font-display font-semibold text-textMain mb-3 group-hover:text-success transition-colors duration-300 relative z-10">
+                            <h4 className="text-2xl font-display font-semibold text-textMain mb-3 group-hover-gradient-text transition-all duration-300 relative z-10">
                                 {card.title}
                             </h4>
 
@@ -61,7 +61,7 @@ const Features = () => {
                             </p>
 
                             {/* Subtle bottom highlight on hover */}
-                            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-success to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-warning opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                     ))}
                 </div>

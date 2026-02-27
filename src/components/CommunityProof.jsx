@@ -13,11 +13,11 @@ const CommunityProof = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10 text-center">
                     {stats.map((stat, index) => (
-                        <div key={index} className="flex flex-col items-center justify-center pt-8 md:pt-0 first:pt-0">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                        <div key={index} className="flex flex-col items-center justify-center pt-8 md:pt-0 first:pt-0 group">
+                            <div className="w-12 h-12 rounded-full bg-white/5 group-hover:bg-accent/10 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all flex items-center justify-center mb-4">
                                 {stat.icon}
                             </div>
-                            <h4 className="text-4xl font-display font-bold text-white tracking-tight mb-1">{stat.value}</h4>
+                            <h4 className="text-4xl font-display font-bold text-white group-hover-gradient-text transition-all tracking-tight mb-1">{stat.value}</h4>
                             <p className="text-sm text-textMuted uppercase tracking-wider font-medium">{stat.label}</p>
                         </div>
                     ))}
