@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CommunityProof from './components/CommunityProof'
 import Features from './components/Features'
+import AdUnit from './components/AdUnit'
 import SocialLinks from './components/SocialLinks'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
@@ -59,6 +60,9 @@ function App() {
         <Hero />
         <CommunityProof />
         <Features />
+
+        {/* Ad Placement */}
+        <AdUnit slot="XXXXXXXXXX" />
 
         {/* Transition Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-12"></div>
