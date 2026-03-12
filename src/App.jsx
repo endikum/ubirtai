@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CommunityProof from './components/CommunityProof'
@@ -8,46 +9,116 @@ import SocialLinks from './components/SocialLinks'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import LegalPopup from './components/LegalPopup'
+import DailySpark from './components/DailySpark'
+import Newsletter from './components/Newsletter'
+import { motion } from 'framer-motion'
+
+// Main Home Page Component
+const Home = ({ onOpenLegal, initialNiche }) => (
+  <main>
+    <Hero initialNiche={initialNiche} />
+    
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <CommunityProof />
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <Features />
+    </motion.div>
+
+    <DailySpark />
+
+    <Newsletter onOpenLegal={onOpenLegal} />
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
+      <AdUnit slot="XXXXXXXXXX" />
+    </motion.div>
+
+    <div className="w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent my-12"></div>
+    
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <SocialLinks />
+    </motion.div>
+  </main>
+);
 
 function App() {
-  const [activePopup, setActivePopup] = React.useState(null);
+  const [activePopup, setActivePopup] = useState(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const privacyContent = (
-    <>
+    <div className="space-y-4">
       <p><strong>Effective Date:</strong> January 1, 2026</p>
-      <h4 className="text-white font-semibold text-lg mt-4">1. Information We Collect</h4>
+      <h4 className="text-white font-semibold text-lg">1. Information We Collect</h4>
       <p>We collect information you provide directly to us when you create an account, such as your name, email address, and viewing preferences. We also automatically collect data regarding your interaction with UBIRT.AI, including device information, IP address, and usage statistics.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">2. How We Use Your Information</h4>
+      <h4 className="text-white font-semibold text-lg">2. How We Use Your Information</h4>
       <p>Your information is used to personalize your experience, tailor the AI-generated motivational reels to your specific goals (Motivation, Health, Sports), and improve the overall functionality of the application.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">3. Data Security</h4>
+      <h4 className="text-white font-semibold text-lg">3. Data Security</h4>
       <p>We implement standard security measures to protect your personal information. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">4. Contact Us</h4>
+      <h4 className="text-white font-semibold text-lg">4. Contact Us</h4>
       <p>If you have questions regarding this Privacy Policy, please contact us at <a href="mailto:info@ubirtai.site" className="text-success hover:underline">info@ubirtai.site</a>.</p>
-    </>
+    </div>
   );
 
   const termsContent = (
-    <>
+    <div className="space-y-4">
       <p><strong>Effective Date:</strong> January 1, 2026</p>
-      <h4 className="text-white font-semibold text-lg mt-4">1. Acceptance of Terms</h4>
+      <h4 className="text-white font-semibold text-lg">1. Acceptance of Terms</h4>
       <p>By downloading, accessing, or using the UBIRT.AI application, you agree to be bound by these Terms of Service.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">2. User Conduct</h4>
+      <h4 className="text-white font-semibold text-lg">2. User Conduct</h4>
       <p>You agree to use the application strictly for lawful purposes. You may not use the service to generate, distribute, or promote any unauthorized or harmful content.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">3. Intellectual Property</h4>
+      <h4 className="text-white font-semibold text-lg">3. Intellectual Property</h4>
       <p>All content generated by UBIRT.AI, including the AI reels, graphics, and structure, remains the intellectual property of UBIRT.AI unless otherwise noted.</p>
-
-      <h4 className="text-white font-semibold text-lg mt-4">4. Limitation of Liability</h4>
+      <h4 className="text-white font-semibold text-lg">4. Limitation of Liability</h4>
       <p>UBIRT.AI is provided "as is". We are not liable for any direct, indirect, or incidental damages resulting from your use of the app or its content recommendations.</p>
-    </>
+    </div>
   );
 
   return (
-    <div className="min-h-screen bg-background text-textMain relative selection:bg-success/30 selection:text-white">
+    <div className="min-h-screen bg-background text-textMain relative selection:bg-success/30 selection:text-white overflow-x-hidden">
+      {/* Custom Cursor Glow */}
+      <div 
+        className="custom-cursor-glow"
+        style={{ 
+          left: mousePos.x, 
+          top: mousePos.y 
+        }}
+      ></div>
+
       {/* Global Background Noise Effect */}
       <div
         className="fixed inset-0 z-50 pointer-events-none opacity-[0.015] mix-blend-overlay"
@@ -56,19 +127,12 @@ function App() {
 
       <Navbar />
 
-      <main>
-        <Hero />
-        <CommunityProof />
-        <Features />
-
-        {/* Ad Placement */}
-        <AdUnit slot="XXXXXXXXXX" />
-
-        {/* Transition Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-12"></div>
-
-        <SocialLinks />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home onOpenLegal={setActivePopup} />} />
+        <Route path="/motivation" element={<Home onOpenLegal={setActivePopup} initialNiche="motivation" />} />
+        <Route path="/health" element={<Home onOpenLegal={setActivePopup} initialNiche="health" />} />
+        <Route path="/sports" element={<Home onOpenLegal={setActivePopup} initialNiche="sports" />} />
+      </Routes>
 
       <Footer onOpenLegal={(type) => setActivePopup(type)} />
       <BackToTop />
