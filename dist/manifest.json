@@ -1,0 +1,21 @@
+{
+  "name": "UBIRT.AI - AI Motivation Reels",
+  "short_name": "UBIRT.AI",
+  "description": "AI-Powered Reels for Motivation, Health, and Sports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060913",
+  "theme_color": "#0d5cba",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
