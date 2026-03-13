@@ -1,45 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-background: #060913;
-  --color-surface: #0c1428;
+  --color-background: #050508;
+  --color-surface: #0a0a0f;
   --color-primary: #0d5cba;
-  /* Brand Blue */
+  --color-secondary: #1a1a2e;
   --color-accent: #00e5ff;
-  /* Cyan */
   --color-success: #00ff88;
-  /* Neon green */
-  --color-warning: #ffcc00;
-  /* Circuit Yellow */
   --color-textMain: #f0f0f5;
-  --color-textMuted: #9a9aab;
-
-  --font-sans: 'Inter', sans-serif;
+  --color-textMuted: #94a3b8;
   --font-display: 'Outfit', sans-serif;
-
-  --animate-gradient-x: gradient-x 15s ease infinite;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --font-body: 'Inter', sans-serif;
 }
 
 @layer base {
   body {
-    background-color: var(--color-background);
-    color: var(--color-textMain);
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    @apply bg-background text-textMain font-body antialiased selection:bg-primary/30;
   }
-}
 
-@layer utilities {
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 60%, transparent);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
 
   .glass-card {
     background-color: color-mix(in srgb, var(--color-surface) 60%, transparent);
@@ -162,4 +140,17 @@
 
 .animate-float-up {
   animation: float-up 2s ease-out forwards;
+}
+
+/* Custom Cursor Glow */
+.custom-cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(13, 92, 186, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease;
 }

@@ -25,8 +25,7 @@ const Features = () => {
 
     return (
         <section id="features" className="py-24 relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-[1px] bg-gradient-to-l from-primary/30 to-transparent z-0"></div>
+            <div className="absolute top-0 right-0 w-1/3 h-px bg-linear-to-l from-primary/30 to-transparent z-0"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 animate-fade-in">
@@ -46,7 +45,7 @@ const Features = () => {
                             className="glass-card group relative overflow-hidden"
                             style={{ animationDelay: `${card.delay}ms` }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             <div className="w-16 h-16 rounded-2xl bg-surface border border-white/5 group-hover:border-accent/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all duration-300">
                                 {card.icon}
@@ -61,7 +60,7 @@ const Features = () => {
                             </p>
 
                             {/* Subtle bottom highlight on hover */}
-                            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-warning opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-primary via-accent to-warning opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                     ))}
                 </div>
