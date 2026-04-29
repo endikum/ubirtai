@@ -9,7 +9,7 @@ const NICHES = {
         title: 'AI-Powered Motivation',
         headlineFirst: 'Fuel Your Day with',
         headlineSecond: 'High-Octane Motivation',
-        description: 'Experience elite motivation reels crafted by AI to spark relentless drive and mental toughness.',
+        description: 'Experience elite motivation reels meticulously crafted by our proprietary AI algorithms to spark relentless drive and mental toughness. Whether you are aiming for a career breakthrough or personal excellence, our daily sparks provide the psychological edge needed to stay disciplined and focused on your long-term vision.',
         video: '/motivation.mp4',
         accent: 'primary',
         icon: <Target className="w-5 h-5 text-primary" />
@@ -19,7 +19,7 @@ const NICHES = {
         title: 'Holistic Health',
         headlineFirst: 'Transform Your Body & Mind',
         headlineSecond: 'with Radical Health AI',
-        description: 'Daily wellness hacks and longevity-focused reels to help you reach peak physical health.',
+        description: 'Unlock peak physical and mental well-being with daily wellness hacks and longevity-focused AI reels. We curate the latest science-backed health insights and deliver them in high-fidelity video format, helping you optimize your nutrition, sleep, and recovery for a life of sustained vitality and radical health.',
         video: '/health.mp4',
         accent: 'success',
         icon: <Heart className="w-5 h-5 text-success" />
@@ -29,7 +29,7 @@ const NICHES = {
         title: 'Elite Sports Performance',
         headlineFirst: 'Master Your Craft with',
         headlineSecond: 'Athletic Performance AI',
-        description: 'Break plateaus with professional training insights and elite sports psychology videos.',
+        description: 'Break through athletic plateaus with professional-grade training insights and elite sports psychology videos. Our AI analyzes high-performance movement and mindset patterns to provide you with the visual cues and motivational triggers essential for mastering your craft and dominating on the field or in the gym.',
         video: '/sports.mp4',
         accent: 'accent',
         icon: <Activity className="w-5 h-5 text-accent" />

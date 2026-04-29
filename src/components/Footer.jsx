@@ -1,7 +1,8 @@
 import React from 'react';
 import { Download, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Footer = ({ onOpenLegal }) => {
+const Footer = () => {
     return (
         <footer className="relative mt-12 bg-surface/50 border-t border-white/5 pt-20 pb-8 overflow-hidden">
             {/* Huge subtle glow for the final CTA */}
@@ -60,36 +61,39 @@ const Footer = ({ onOpenLegal }) => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
-                <a href="/" className="flex items-center gap-3 group">
-                    <img
-                        src="/logo.png"
-                        alt="UBIRT.AI Logo"
-                        className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(0,229,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.6)] transition-all duration-300 group-hover:scale-105"
-                    />
-                    <span className="font-display font-bold text-lg text-textMain group-hover-gradient-text transition-all duration-300">
-                        UBIRT.AI
-                    </span>
-                </a>
+            <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-8 relative z-10">
+                <div className="flex flex-col items-center lg:items-start gap-4">
+                    <Link to="/" className="flex items-center gap-3 group">
+                        <img
+                            src="/logo.png"
+                            alt="UBIRT.AI Logo"
+                            className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(0,229,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.6)] transition-all duration-300 group-hover:scale-105"
+                        />
+                        <span className="font-display font-bold text-lg text-white group-hover-gradient-text transition-all duration-300">
+                            UBIRT.AI
+                        </span>
+                    </Link>
+                    <p className="text-sm text-textMuted">
+                        &copy; {new Date().getFullYear()} UBIRT.AI. All rights reserved.
+                    </p>
+                </div>
 
-                <p className="text-sm text-textMuted">
-                    &copy; {new Date().getFullYear()} UBIRT.AI. All rights reserved.
-                </p>
-
-                <div className="flex flex-col md:flex-row gap-6 text-sm text-textMuted items-center md:items-start">
-                    <a href="mailto:info@ubirtai.site" className="hover-gradient-text transition-all duration-300">info@ubirtai.site</a>
-                    <button
-                        onClick={() => onOpenLegal('privacy')}
-                        className="hover-gradient-text transition-all duration-300 cursor-pointer"
-                    >
-                        Privacy Policy
-                    </button>
-                    <button
-                        onClick={() => onOpenLegal('terms')}
-                        className="hover-gradient-text transition-all duration-300 cursor-pointer"
-                    >
-                        Terms of Service
-                    </button>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 text-sm text-textMuted">
+                    <div className="flex flex-col gap-2">
+                        <h4 className="text-white font-semibold mb-1">Company</h4>
+                        <Link to="/about" className="hover:text-primary transition-colors">About Us</Link>
+                        <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+                        <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <h4 className="text-white font-semibold mb-1">Legal</h4>
+                        <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+                    </div>
+                    <div className="flex flex-col gap-2 col-span-2 md:col-span-1">
+                        <h4 className="text-white font-semibold mb-1">Support</h4>
+                        <a href="mailto:info@ubirtai.site" className="hover:text-primary transition-colors">info@ubirtai.site</a>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { trackEvent, ANALYTICS_EVENTS } from '../utils/analytics';
+import { Link } from 'react-router-dom';
 
-const Newsletter = ({ onOpenLegal }) => {
+const Newsletter = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState('idle'); // idle, loading, success
 
@@ -83,7 +84,7 @@ const Newsletter = ({ onOpenLegal }) => {
                         </AnimatePresence>
 
                         <p className="mt-8 text-xs text-textMuted text-center">
-                            By joining, you agree to our <span onClick={() => onOpenLegal('terms')} className="text-white cursor-pointer hover:underline">Terms</span> and <span onClick={() => onOpenLegal('privacy')} className="text-white cursor-pointer hover:underline">Privacy Policy</span>.
+                            By joining, you agree to our <Link to="/terms-of-service" className="text-white hover:underline">Terms</Link> and <Link to="/privacy-policy" className="text-white hover:underline">Privacy Policy</Link>.
                         </p>
                     </motion.div>
                 </div>
