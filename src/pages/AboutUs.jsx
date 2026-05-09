@@ -12,6 +12,23 @@ const AboutUs = () => {
                 <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-8">
                     About <span className="gradient-text">UBIRT.AI</span>
                 </h1>
+
+                <section
+                    id="answer"
+                    aria-label="Quick answer"
+                    className="mb-10 rounded-2xl border border-white/10 bg-surface/40 px-6 py-5"
+                >
+                    <p className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
+                        Quick answer
+                    </p>
+                    <p className="text-textMain leading-relaxed">
+                        <strong className="text-white">UBIRT.AI</strong> builds AI-curated motivation, health, and sports reels so busy people can reinforce mindset and habits in minutes—not hours—via short video on Android today.
+                    </p>
+                </section>
+
+                <p className="text-xs text-textMuted mb-10">
+                    Last updated: May 9, 2026
+                </p>
                 
                 <div className="prose prose-invert prose-lg max-w-none space-y-6 text-textMuted">
                     <p>

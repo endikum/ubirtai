@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import PageSeo from './components/PageSeo'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CommunityProof from './components/CommunityProof'
@@ -10,6 +11,7 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import DailySpark from './components/DailySpark'
 import Newsletter from './components/Newsletter'
+import HomeFaq from './components/HomeFaq'
 import { motion } from 'framer-motion'
 
 // New Page Imports
@@ -20,9 +22,11 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 
 // Main Home Page Component
-const Home = ({ initialNiche }) => (
+function Home({ initialNiche }) {
+  const { pathname } = useLocation()
+  return (
   <main>
-    <Hero initialNiche={initialNiche} />
+    <Hero key={pathname} initialNiche={initialNiche} />
     
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -46,6 +50,8 @@ const Home = ({ initialNiche }) => (
 
     <Newsletter />
 
+    <HomeFaq />
+
     <div className="w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent my-12"></div>
     
     <motion.div
@@ -57,7 +63,8 @@ const Home = ({ initialNiche }) => (
       <SocialLinks />
     </motion.div>
   </main>
-);
+  )
+}
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -78,6 +85,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background text-textMain relative selection:bg-success/30 selection:text-white overflow-x-hidden">
+      <PageSeo pathname={location.pathname} />
       {/* Custom Cursor Glow */}
       <div 
         className="custom-cursor-glow"

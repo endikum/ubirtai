@@ -26,53 +26,90 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Primary Meta Tags -->
-  <title>UBIRT.AI - AI Motivation Reels & Sports Short Videos App</title>
-  <meta name="title" content="UBIRT.AI - AI Motivation Reels & Sports Short Videos App" />
+  <!-- Primary Meta Tags (defaults; routes override via react-helmet-async) -->
+  <title>AI Motivation Reels & Sports Short Videos App | UBIRT.AI</title>
+  <meta name="title" content="AI Motivation Reels & Sports Short Videos App | UBIRT.AI" />
   <meta name="description"
-    content="Experience the #1 AI video generator app for motivation, health, and sports. Discover highly engaging AI workout reels and daily viral short videos. Download UBIRT.AI today." />
+    content="UBIRT.AI is an AI video app for motivation, health, and sports: curated short reels on Android. Download free and start your daily spark." />
   <meta name="keywords"
-    content="AI video generator app, AI motivation reels, Fitness motivation short videos, AI health and wellness videos, AI sports highlights generator, Viral AI reels, Generate AI workout reels, Daily motivation app" />
+    content="AI motivation reels, AI health videos, AI sports shorts, fitness motivation app, daily motivation reels, UBIRT.AI, Android motivation app" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Canonical Link -->
   <link rel="canonical" href="https://www.ubirtai.site/" />
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="UBIRT.AI" />
   <meta property="og:url" content="https://www.ubirtai.site/" />
-  <meta property="og:title" content="UBIRT.AI - AI Motivation Reels & Sports Short Videos App" />
+  <meta property="og:title" content="AI Motivation Reels & Sports Short Videos App | UBIRT.AI" />
   <meta property="og:description"
-    content="Experience the #1 AI video generator app for motivation, health, and sports. Discover highly engaging AI workout reels and daily viral short videos." />
+    content="UBIRT.AI is an AI video app for motivation, health, and sports: curated short reels on Android. Download free and start your daily spark." />
   <meta property="og:image" content="https://www.ubirtai.site/logo.png" />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.ubirtai.site/" />
-  <meta property="twitter:title" content="UBIRT.AI - AI Motivation Reels & Sports Short Videos App" />
-  <meta property="twitter:description"
-    content="Experience the #1 AI video generator app for motivation, health, and sports. Discover highly engaging AI workout reels and daily viral short videos." />
-  <meta property="twitter:image" content="https://www.ubirtai.site/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.ubirtai.site/" />
+  <meta name="twitter:title" content="AI Motivation Reels & Sports Short Videos App | UBIRT.AI" />
+  <meta name="twitter:description"
+    content="UBIRT.AI is an AI video app for motivation, health, and sports: curated short reels on Android. Download free and start your daily spark." />
+  <meta name="twitter:image" content="https://www.ubirtai.site/logo.png" />
 
-  <!-- Structured Data (Schema.org) -->
+  <!-- Structured Data (Schema.org) — global graph -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "UBIRT.AI",
-      "applicationCategory": "HealthAndFitnessApplication",
-      "operatingSystem": "Web, iOS, Android",
-      "url": "https://www.ubirtai.site/",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
-      },
-      "description": "Experience the next generation of highly engaging, AI-curated short videos focused on motivation, health, and sports.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1000"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.ubirtai.site/#organization",
+          "name": "UBIRT.AI",
+          "url": "https://www.ubirtai.site/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.ubirtai.site/logo.png"
+          },
+          "sameAs": [
+            "https://www.youtube.com/@ubirtai",
+            "https://tiktok.com/@ubirtai",
+            "https://instagram.com/ubirtai",
+            "https://x.com/ubirtai",
+            "https://www.facebook.com/ubirtai",
+            "https://www.threads.com/@ubirtai",
+            "https://linktr.ee/ubirt.ai"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@ubirtai.site",
+            "contactType": "customer support",
+            "availableLanguage": ["English"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.ubirtai.site/#website",
+          "url": "https://www.ubirtai.site/",
+          "name": "UBIRT.AI",
+          "publisher": { "@id": "https://www.ubirtai.site/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.ubirtai.site/#app",
+          "name": "UBIRT.AI",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "Android",
+          "url": "https://www.ubirtai.site/",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=ubirtai.app",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "AI-curated short videos for motivation, holistic health, and sports performance, delivered as a daily reels-style experience.",
+          "publisher": { "@id": "https://www.ubirtai.site/#organization" }
+        }
+      ]
     }
   </script>
 

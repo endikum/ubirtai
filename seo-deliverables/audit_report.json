@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-05-09T21:04:34.068Z",
+  "wave": "A",
+  "summary": [
+    "Compared sitemap URLs via HTTP HEAD on production.",
+    "Deep routes returning 404 on static hosting break SEO and Lighthouse for those URLs until SPA fallback (history fallback) is configured.",
+    "Homepage Lighthouse lab metrics captured from production and/or local preview — see core_web_vitals_baseline.json."
+  ],
+  "hostingSpaRewrite": "Ensure nginx / Cloudflare / static host rewrites unknown paths to /index.html so /about and /blog return 200 with the app.",
+  "deepLinkHeadResults": [
+    {
+      "url": "https://www.ubirtai.site/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ubirtai.site/"
+    },
+    {
+      "url": "https://www.ubirtai.site/motivation",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/motivation"
+    },
+    {
+      "url": "https://www.ubirtai.site/health",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/health"
+    },
+    {
+      "url": "https://www.ubirtai.site/sports",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/sports"
+    },
+    {
+      "url": "https://www.ubirtai.site/about",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/about"
+    },
+    {
+      "url": "https://www.ubirtai.site/blog",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/blog"
+    },
+    {
+      "url": "https://www.ubirtai.site/contact",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/contact"
+    },
+    {
+      "url": "https://www.ubirtai.site/privacy-policy",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/privacy-policy"
+    },
+    {
+      "url": "https://www.ubirtai.site/terms-of-service",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://www.ubirtai.site/terms-of-service"
+    }
+  ]
+}

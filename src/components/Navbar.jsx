@@ -16,11 +16,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close mobile menu on route change
-    useEffect(() => {
-        setIsOpen(false);
-    }, [location]);
-
     const navLinks = [
         { name: 'About', path: '/about' },
         { name: 'Blog', path: '/blog' },
@@ -30,7 +25,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'glass py-3' : 'py-5 bg-transparent'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="flex items-center gap-3 group">
+                <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 group">
                     <img
                         src="/logo.png"
                         alt="UBIRT.AI Logo"
@@ -81,11 +76,12 @@ const Navbar = () => {
                 >
                     <div className="flex flex-col p-6 space-y-4">
                         {navLinks.map((link) => (
-                            <Link 
-                                key={link.name} 
-                                to={link.path} 
-                                className={`text-lg font-medium ${location.pathname === link.path ? 'gradient-text' : 'text-textMuted'}`}
-                            >
+                        <Link 
+                            key={link.name} 
+                            to={link.path}
+                            onClick={() => setIsOpen(false)}
+                            className={`text-lg font-medium ${location.pathname === link.path ? 'gradient-text' : 'text-textMuted'}`}
+                        >
                                 {link.name}
                             </Link>
                         ))}

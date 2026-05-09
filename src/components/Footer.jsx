@@ -78,7 +78,13 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 text-sm text-textMuted">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-4 text-sm text-textMuted">
+                    <div className="flex flex-col gap-2">
+                        <h4 className="text-white font-semibold mb-1">Topics</h4>
+                        <Link to="/motivation" className="hover:text-primary transition-colors">Motivation reels</Link>
+                        <Link to="/health" className="hover:text-primary transition-colors">Health & wellness</Link>
+                        <Link to="/sports" className="hover:text-primary transition-colors">Sports performance</Link>
+                    </div>
                     <div className="flex flex-col gap-2">
                         <h4 className="text-white font-semibold mb-1">Company</h4>
                         <Link to="/about" className="hover:text-primary transition-colors">About Us</Link>

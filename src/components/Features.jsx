@@ -29,10 +29,10 @@ const Features = () => {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h2 className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-3">Why UBIRT.AI?</h2>
-                    <h3 className="text-4xl md:text-5xl font-display font-bold text-textMain">
+                    <p className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-3">Why UBIRT.AI?</p>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-textMain">
                         Content That <span className="gradient-text">Drives Results</span>
-                    </h3>
+                    </h2>
                     <p className="mt-4 text-textMuted max-w-2xl mx-auto text-lg hover-gradient-text transition-all duration-300">
                         Our app learns what inspires you, delivering a personalized feed of high-impact reels.
                     </p>
@@ -51,9 +51,9 @@ const Features = () => {
                                 {card.icon}
                             </div>
 
-                            <h4 className="text-2xl font-display font-semibold text-textMain mb-3 group-hover-gradient-text transition-all duration-300 relative z-10">
+                            <h3 className="text-2xl font-display font-semibold text-textMain mb-3 group-hover-gradient-text transition-all duration-300 relative z-10">
                                 {card.title}
-                            </h4>
+                            </h3>
 
                             <p className="text-textMuted leading-relaxed relative z-10">
                                 {card.description}

@@ -36,19 +36,15 @@ const NICHES = {
     }
 };
 
-const Hero = ({ initialNiche = 'motivation' }) => {
-    const [currentNiche, setCurrentNiche] = useState(NICHES[initialNiche] || NICHES.motivation);
+const Hero = ({ initialNiche }) => {
+    const resolved =
+        initialNiche && NICHES[initialNiche] ? initialNiche : 'motivation';
+    const [currentNiche, setCurrentNiche] = useState(NICHES[resolved]);
     const [isPlaying, setIsPlaying] = useState(false);
     const [hearts, setHearts] = useState([]);
     const [likes, setLikes] = useState(12000);
     const [comments, setComments] = useState(340);
     const videoRef = useRef(null);
-
-    useEffect(() => {
-        if (NICHES[initialNiche]) {
-            setCurrentNiche(NICHES[initialNiche]);
-        }
-    }, [initialNiche]);
 
     const handleNicheSwitch = (n) => {
         setCurrentNiche(n);
@@ -121,6 +117,19 @@ const Hero = ({ initialNiche = 'motivation' }) => {
                         <span className="w-2 h-2 rounded-full bg-linear-to-r from-accent to-primary animate-pulse"></span>
                         <span className="gradient-text font-bold tracking-wide">Premium AI Curated</span>
                     </motion.div>
+
+                    <section
+                        id="answer"
+                        aria-label="Quick answer"
+                        className="mb-8 max-w-xl mx-auto lg:mx-0 rounded-2xl border border-white/10 bg-surface/40 px-5 py-4 text-left backdrop-blur-md"
+                    >
+                        <p className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
+                            Quick answer
+                        </p>
+                        <p className="text-textMain leading-relaxed">
+                            <strong className="text-white">UBIRT.AI</strong> is an Android app that streams AI-curated short reels for motivation, health, and sports—built to deliver a daily, consistent spark without long tutorials.
+                        </p>
+                    </section>
 
                     <div className="flex justify-center lg:justify-start gap-2 mb-8 p-1.5 rounded-2xl bg-surface/50 border border-white/5 w-fit mx-auto lg:mx-0 backdrop-blur-md">
                         {Object.values(NICHES).map((n) => (

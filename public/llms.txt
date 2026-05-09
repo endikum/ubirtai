@@ -1,0 +1,26 @@
+# UBIRT.AI
+> AI-curated short video reels for motivation, health, and sports—focused on consistency and daily sparks.
+
+UBIRT.AI is a consumer mobile product (Android on Google Play; iOS planned) that delivers snackable, AI-curated reels so users can reinforce mindset, wellness, and athletic performance without long-form lessons.
+
+## Key pages
+- https://www.ubirtai.site/ — Product overview, FAQ, newsletter, and social links
+- https://www.ubirtai.site/motivation — Motivation and mindset reels positioning
+- https://www.ubirtai.site/health — Health and wellness reels positioning
+- https://www.ubirtai.site/sports — Sports performance reels positioning
+- https://www.ubirtai.site/about — Mission, technology, and community context
+- https://www.ubirtai.site/blog — Articles on AI, mindset, and performance (listing page)
+- https://www.ubirtai.site/contact — Contact form and support email (info@ubirtai.site)
+- https://www.ubirtai.site/privacy-policy — Privacy practices
+- https://www.ubirtai.site/terms-of-service — Terms of use
+
+## Primary topics
+- AI-curated short-form video and reels UX
+- Motivation, discipline, and mental performance content
+- Holistic health, wellness habits, and longevity framing
+- Sports psychology and athletic performance cues
+- Android distribution via Google Play (package id ubirtai.app)
+
+## Preferred factual anchors
+- Official site: https://www.ubirtai.site/
+- Android app listing: https://play.google.com/store/apps/details?id=ubirtai.app

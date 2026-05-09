@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-05-09T21:04:34.065Z",
+  "googleRichResultsTestUrls": [
+    "https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.ubirtai.site%2F"
+  ],
+  "manualSteps": "Paste each primary URL into Google Rich Results Test after deploy. Automated HTTP fetch only sees initial HTML.",
+  "initialHtmlJsonLd": {
+    "blocksFound": 1,
+    "schemaTypesInSource": [
+      "SoftwareApplication"
+    ],
+    "schemaTypesInLocalDistBuild": [
+      "Organization",
+      "WebSite",
+      "SoftwareApplication"
+    ],
+    "deployMayBeBehindRepo": true,
+    "organizationPresent": false,
+    "softwareApplicationPresent": true,
+    "faqPageInInitialHtml": false
+  },
+  "clientRenderedSchemaNote": "FAQPage and BreadcrumbList JSON-LD are injected via react-helmet-async after hydration; they will not appear in a raw HTML-only fetch. Rich Results Test executes JavaScript and should still detect them on the live URL.",
+  "validationStatus": "manual_confirmation_required"
+}

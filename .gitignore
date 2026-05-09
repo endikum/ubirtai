@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Wave A Lighthouse raw dumps (regenerate with npx lighthouse …)
+.wave-a-lh*.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

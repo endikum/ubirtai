@@ -1,0 +1,10 @@
+url,http_status,final_url_or_error,notes
+"https://www.ubirtai.site/",200,"https://www.ubirtai.site/",""
+"https://www.ubirtai.site/motivation",404,"https://www.ubirtai.site/motivation","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/health",404,"https://www.ubirtai.site/health","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/sports",404,"https://www.ubirtai.site/sports","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/about",404,"https://www.ubirtai.site/about","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/blog",404,"https://www.ubirtai.site/blog","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/contact",404,"https://www.ubirtai.site/contact","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/privacy-policy",404,"https://www.ubirtai.site/privacy-policy","Likely SPA: configure host to serve index.html for all routes"
+"https://www.ubirtai.site/terms-of-service",404,"https://www.ubirtai.site/terms-of-service","Likely SPA: configure host to serve index.html for all routes"
